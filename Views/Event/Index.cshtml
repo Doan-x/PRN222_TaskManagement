@@ -1,0 +1,294 @@
+﻿@model IEnumerable<PRN222_TaskManagement.Models.Event>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<style>
+    #calendar-container {
+        transition: width 0.3s ease;
+    }
+</style>
+<h2>Index</h2>
+<div class="container-fluid">
+    <div class="row">
+        <!-- Calendar -->
+        <div id="calendar-container" class="col-lg-12">
+            <div id="calendar"></div>
+        </div>
+
+        <div id="event-detail" class="col-lg-4 d-none">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">
+                        <i class="bi bi-calendar-event"></i> Chi tiết sự kiện
+                    </h5>
+                    <button id="closeDetail" class="btn-close btn-close-white" aria-label="Close"></button>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <strong>Tiêu đề:</strong> <span id="eventTitle"></span>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Loại:</strong> <span id="eventCategory" class="badge bg-info text-dark"></span>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Mô tả:</strong> <span id="eventDescription"></span>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Bắt đầu:</strong> <span id="eventStart"></span>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Kết thúc:</strong> <span id="eventEnd"></span>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Địa điểm:</strong> <span id="eventLocation"></span>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Ưu tiên:</strong>
+                            <span id="eventPriority" class="badge"></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-footer d-flex justify-content-end">
+                    <button id="btnEdit" class="btn btn-sm btn-warning me-2">
+                        <i class="bi bi-pencil-square"></i> Edit
+                    </button>
+                    <button id="btnDelete" class="btn btn-sm btn-danger">
+                        <i class="bi bi-trash"></i> Xóa
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (TempData["Success"] != null)
+{
+    <div class="position-fixed" style="top: 10%; right: 1rem; z-index: 1050; width: 350px;">
+        <div id="successToast" class="toast show align-items-center text-bg-success border-0 shadow-lg" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body fw-bold fs-5" id="toast-content">
+                    ✅ @TempData["Success"]
+                </div>
+                <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+}
+<div id="notification" class="position-fixed" style="top: 10%; right: 1rem; z-index: 1050; width: 350px;">
+
+    <link href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.css" rel="stylesheet" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.print.css" rel="stylesheet" media="print" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    <!-- Toastr CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+    @section Scripts {
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
+        <!-- Toastr JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+        <script>
+            $(document).ready(function () {
+            var $eventDetail = $("#event-detail");
+              var $calendarContainer = $("#calendar-container");
+              var $closeDetailBtn = $("#closeDetail");
+                var eventsA = [];
+                var selectedEvent = null;
+                FetchEventAndRenderCalendar();
+                function FetchEventAndRenderCalendar() {
+                    eventsA = [];
+                    $.ajax({
+                        type: "GET",
+                        url: "@Url.Action("GetEvents", "Event")",
+                        success: function (data) {
+                            $.each(data, function (i, v) {
+                               eventsA.push({
+                        id: v.eventId, // Đổi eventID thành id
+                        title: v.title,
+                        description: v.description,
+                        start: moment(v.startTime).format(), // Đảm bảo định dạng đúng
+                        end: v.endTime ? moment(v.endTime).format() : null,
+                        location: v.location,
+                        priority: v.priority,
+                        color: v.color,
+                        categoryName: v.category?.name,
+                        allDay: false
+                    });
+                });
+
+                console.log("Sự kiện đã xử lý:", eventsA); // Kiểm tra dữ liệu sau khi xử lý
+
+                GenerateCalender(eventsA);
+            },
+            error: function (xhr, status, error) {
+                console.error("Lỗi AJAX:", status, error); // Hiển thị lỗi chi tiết
+                alert("Lấy dữ liệu thất bại!");
+            }
+                    })
+                }
+
+                function GenerateCalender(eventsA) {
+                    $('#calendar').fullCalendar('destroy');
+                    $('#calendar').fullCalendar({
+                        contentHeight: 600,
+                        defaultDate: new Date(),
+                        timeFormat: 'HH(:mm)A',
+                        header: {
+                            left: 'prev,next today',
+                            center: 'title',
+                            right: 'month,basicWeek,basicDay'
+                        },
+                        eventLimit: true,
+                        eventColor: '#378006',
+                        events:  eventsA,
+                        eventClick: function (info) {
+                            selectedEvent = info;
+                            RenderEventDetail(info);
+
+                        },
+                        selectable: true,
+                        select: function (start, end) {
+                            selectedEvent = {
+                                id : 0,
+                                title: '',
+                                description: '',
+                                start: start,
+                                end: end,
+                                color: ''
+                            };
+                            console.log(`Select calendar: ${selectedEvent.start}`, selectedEvent);
+                            RenderEventDetail(selectedEvent);
+                            $('#calendar').fullCalendar('unselect');
+                        },
+                        editable: true,
+                        eventDrop: function (event) {
+                            var data = {
+                                EventId: event.id,
+                                StartTime: event.start.format("YYYY-MM-DD HH:mm"),
+                                EndTime: event.end.format("YYYY-MM-DD HH:mm"),
+                            };
+                            console.log("Edit by drap on drop: ", data);
+                            SaveEvent(data.EventId, data.StartTime, data.EndTime)
+                        }
+                    })
+                }
+
+
+                $('#btnEdit').click(function () {
+                    console.log("Update event");
+                    const url = `@Url.Action("SaveFromCalendar", "Event")?id=${encodeURIComponent(selectedEvent.id)}&start=${encodeURIComponent(selectedEvent.start.format("YYYY-MM-DD HH:mm"))}&end=${encodeURIComponent(selectedEvent.end.format("YYYY-MM-DD HH:mm"))}`;
+
+                    console.log("Url:", url);
+                    // Redirect đến trang /Edit với dữ liệu
+                    window.location.href = url;
+                })
+                $('#btnDelete').click(function () {
+                    if (selectedEvent != null && confirm('Are you sure?')) {
+                        $.ajax({
+                            type: "POST",
+                            url: `@Url.Action("Delete", "Event")`,
+                            data: {'id': selectedEvent.id},
+                            success: function (data) {
+                                if (data.status) {
+                                    console.log("Delete sự kiện thành công!");
+                                    toastr.success("Delete event success", "Notification", {
+                                    timeOut: 3000,  // 3 giây
+                                    progressBar: true,
+                                    positionClass: "toast-top-right"
+                                    });
+                                    FetchEventAndRenderCalendar();
+                                    
+                                }
+                            },
+                            error: function () {
+                                alert('Failed');
+                            }
+                        })
+                    }
+                })
+
+                $('#dtp1,#dtp2').datetimepicker({
+                    format: 'YYYY-MM-DD HH:mm'
+                });
+
+                function RenderEventDetail(info){
+                            $calendarContainer.removeClass("col-lg-12").addClass("col-lg-8");
+
+                            setTimeout(() => {
+                                $eventDetail.removeClass("d-none");
+                            }, 250);
+
+                            console.log("Event", info);
+
+                            // Cập nhật thông tin sự kiện eventCategory
+                            $("#eventId").text(info.id);
+                            $("#eventTitle").text(info.title);
+                            $("#eventCategory").text(info.categoryName || "N/A");
+                            $("#eventDescription").text(info.description || "Không có mô tả");
+                            $("#eventStart").text(info.start ? moment(info.start).format("DD-MMM-YYYY HH:mm a") : "Chưa xác định");
+                           $("#eventEnd").text(info.end ? moment(info.end).format("DD-MMM-YYYY HH:mm a") : "Chưa xác định");
+                            $("#eventLocation").text(info.location || "Không có địa điểm");
+
+                            // Gán màu cho mức độ ưu tiên
+                            var priorityElement = $("#eventPriority");
+                            priorityElement.text(info.priority ? info.priority.toUpperCase() : "LOW");
+                            priorityElement.removeClass("bg-danger bg-warning bg-success");
+
+                            switch (info.priority) {
+                                case "high":
+                                    priorityElement.addClass("bg-danger");
+                                    break;
+                                case "medium":
+                                    priorityElement.addClass("bg-warning");
+                                    break;
+                                case "low":
+                                default:
+                                    priorityElement.addClass("bg-success");
+                            }
+                            if(info.id > 0){
+                                $('#btnEdit').text("✏️ Edit");
+                            }else{
+                                $('#btnEdit').text("📅 Add");
+                            }
+                }
+            function SaveEvent(eventId, startTime, endTime) {
+
+                $.ajax({
+                    type: "POST",
+                    url: `/event/saveEvent?eventId=${eventId}&startTime=${encodeURIComponent(startTime)}&endTime=${encodeURIComponent(endTime)}`,
+                    success: function (response) {
+                        if (response.status) {
+                            console.log("Lưu sự kiện thành công!");
+                            toastr.success("Update event success", "Notification", {
+                            timeOut: 3000,  // 3 giây
+                            progressBar: true,
+                            positionClass: "toast-top-right"
+                            });
+                        } else {
+                            console.warn("Lưu sự kiện thất bại!", response.message);
+                        }
+                    },
+                    error: function (xhr) {
+                        console.error("Lỗi khi gửi yêu cầu!", xhr.responseText);
+                    }
+                     });
+            }
+                    $closeDetailBtn.on("click", function () {
+                    $eventDetail.addClass("d-none"); // Ẩn panel
+                    $calendarContainer.removeClass("col-lg-8").addClass("col-lg-12"); // Phóng to lịch
+                });
+            })
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var toastEl = document.getElementById("successToast");
+                if (toastEl) {
+                    var toast = new bootstrap.Toast(toastEl, { delay: 3000 });
+                    toast.show();
+                }
+            });
+        </script>
+    }

@@ -1,0 +1,113 @@
+﻿@model PRN222_TaskManagement.Models.Event
+
+@{
+    var categories = ViewData["Categories"] as List<Category>;
+}
+
+<form id="myForm" asp-action="SaveEvent" asp-controller="Event" method="post" class="row g-3">
+    <input type="hidden" asp-for="EventId" id="hdEventID" />
+    <!-- Title -->
+    <div class="col-12">
+        <label class="form-label">Title</label>
+        <input type="text" asp-for="Title" class="form-control" required />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+
+    <!-- Description -->
+    <div class="col-12">
+        <label class="form-label">Description</label>
+        <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+
+    </div>
+
+    <!-- Start Time -->
+    <div class="col-6">
+        <label class="form-label">Start Time</label>
+        <div class="input-group">
+            <input type="datetime-local" asp-for="StartTime" class="form-control" required id="txtStart" />
+            <span class="input-group-text"><i class="bi bi-calendar"></i></span>
+        </div>
+        <span asp-validation-for="StartTime" class="text-danger"></span>
+
+    </div>
+
+    <!-- End Time -->
+    <div class="col-6">
+        <label class="form-label">End Time</label>
+        <div class="input-group">
+            <input type="datetime-local" asp-for="@Model.EndTime" class="form-control" required id="txtEnd" />
+            <span class="input-group-text"><i class="bi bi-calendar"></i></span>
+        </div>
+        <span asp-validation-for="EndTime" class="text-danger"></span>
+
+    </div>
+
+    <!-- Location -->
+    <div class="col-12">
+        <label class="form-label">Location</label>
+        <input type="text" asp-for="Location" class="form-control" />
+        <span asp-validation-for="Location" class="text-danger"></span>
+
+    </div>
+    <!-- Category -->
+    <div class="col-12">
+        <label for="CategoryId">Select Category:</label>
+        <select asp-for="CategoryId" class="form-s">
+            @foreach (var category in categories)
+            {
+                <option value="@category.CategoryId">@category.Name</option>
+            }
+        </select>
+        <span asp-validation-for="CategoryId" class="text-danger"></span>
+    </div>
+    <!-- Priority -->
+    <div class="col-12">
+        <label class="form-label">Priority</label>
+        <select asp-for="Priority" class="form-select">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select>
+        <span asp-validation-for="Priority" class="text-danger"></span>
+
+    </div>
+
+    <!-- Color -->
+    <div class="col-12">
+        <label class="form-label">Theme Color</label>
+        <select asp-for="Color" class="form-select">
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="black">Black</option>
+            <option value="green">Green</option>
+        </select>
+        <span asp-validation-for="Color" class="text-danger"></span>
+    </div>
+
+    <!-- Buttons -->
+    <div class="col-12 text-end">
+        <button type="submit" class="btn btn-success">Save</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    </div>
+</form>
+
+@{
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#myForm').submit(function (e) {
+            var startDate = moment($('#txtStart').val(), "DD/MM/YYYY HH:mm A").toDate();
+            var endDate = moment($('#txtEnd').val(), "DD/MM/YYYY HH:mm A").toDate();
+
+            if (startDate >= endDate) {
+                alert('Invalid end date');
+                e.preventDefault();
+                return false;
+            }
+
+            console.log("Form is valid, submitting...");
+        });
+    });
+</script>

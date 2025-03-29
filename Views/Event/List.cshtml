@@ -1,0 +1,249 @@
+﻿@model IEnumerable<PRN222_TaskManagement.Models.Event>
+
+@{
+    ViewData["Title"] = "List";
+    var categories = ViewData["Categories"] as List<Category>;
+
+    var selectedCategoryId = ViewBag.SelectedCategoryId as string ?? "";
+    var selectedPriority = ViewBag.SelectedPriority as string ?? "";
+}
+@{
+    var groupedEvents = Model.OrderBy(e => e.StartTime).ToList();
+    var today = DateOnly.FromDateTime(DateTime.Now); // Lấy ngày hiện tại
+
+    var todayEvents = groupedEvents
+        .Where(e => DateOnly.FromDateTime(e.StartTime) == today)
+        .ToList(); // Lọc sự kiện diễn ra hôm nay
+
+    var futureEvents = groupedEvents
+        .Where(e => DateOnly.FromDateTime(e.StartTime) != today)
+        .OrderBy(e => e.StartTime)
+        .ToList(); // Các sự kiện khác, sắp xếp theo ngày
+
+    var sortedEvents = todayEvents.Concat(futureEvents).ToList(); // Gộp danh sách lại, ưu tiên hôm nay lên đầu
+    DateOnly? currentDate = null; // Biến lưu ngày hiện tại
+}
+
+<div class="container">
+    <h2>All event</h2>
+
+    <!-- Form lọc và sắp xếp -->
+    <form method="get" class="mb-3">
+        <div class="row">
+            <div class="col-md-6">
+                <input type="text" name="titleSearch" placeholder="Search by title" value="@Context.Request.Query["titleSearch"]" class="form-control" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <label>Chọn danh mục:</label>
+                <select name="categoryId" class="form-control">
+                    <option value="">-- Tất cả --</option>
+                    @foreach (var c in categories)
+                    {
+                        <option value="@c.CategoryId" selected="@(c.CategoryId.ToString() == selectedCategoryId ? "selected" : null)">
+                            @c.Name
+                        </option>
+                    }
+                </select>
+            </div>
+
+            <div class="col-md-3">
+                <label>Chọn mức độ ưu tiên:</label>
+                <select name="priority" class="form-control">
+                    <option value="">-- Tất cả --</option>
+                    <option value="high" selected="@(selectedPriority == "high" ? "selected" : null)">Cao</option>
+                    <option value="medium" selected="@(selectedPriority == "medium" ? "selected" : null)">Trung bình</option>
+                    <option value="low" selected="@(selectedPriority == "low" ? "selected" : null)">Thấp</option>
+                </select>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-12 text-right">
+                <button type="submit" class="btn btn-primary">Áp dụng</button>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col">
+            <a asp-controller="Event" asp-action="Save" asp-route-returnUrl="@Context.Request.Path" class="btn btn-primary">Tạo sự kiện mới</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            @if (TempData["Success"] != null)
+            {
+                <div class="alert alert-success">
+                    @TempData["Success"]
+                </div>
+            }
+
+            @if (TempData["Error"] != null)
+            {
+                <div class="alert alert-danger">
+                    @TempData["Error"]
+                </div>
+            }
+        </div>
+    </div>
+    <!-- Hiển thị bảng sự kiện -->
+    @if (Model != null && Model.Any())
+    {
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Title</th>
+                    <th>Category</th>
+                    <th>Location</th>
+                    <th>Priority</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Share</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var eventItem in sortedEvents)
+                {
+                    var eventDate = DateOnly.FromDateTime(eventItem.StartTime);
+
+                    // Nếu ngày thay đổi, in tiêu đề nhóm
+                    if (currentDate == null || eventDate != currentDate)
+                    {
+                        currentDate = eventDate;
+                        <tr class="table-group-divider">
+                            <td colspan="9" class="fw-bold text-light bg-secondary text-start">
+                                @currentDate.Value.ToString("yyyy-MM-dd")
+                                @if (currentDate == today)
+                                {
+                                    <span class="badge bg-primary">Today</span>
+                                }
+                            </td>
+                        </tr>
+                    }
+
+                    <tr>
+                        <td></td>
+                        <td>@eventItem.Title</td>
+                        <td>@(eventItem.Category?.Name ?? "N/A")</td>
+                        <td>@eventItem.Location</td>
+                        <td>
+                            <span class="badge text-bg-@GetPriorityClass(eventItem.Priority)">
+                                @eventItem.Priority
+                            </span>
+                        </td>
+                        <td>@eventItem.StartTime.ToString("HH:mm")</td>
+                        <td>@eventItem.EndTime.ToString("HH:mm")</td>
+                        <td>@(string.Join("\n", eventItem.EventShares.Select(e => e.SharedWithEmail).Distinct()))</td>
+                        <td>
+                            <a href="@Url.Action("Save", "Event", new { id = eventItem.EventId , returnUrl = @Context.Request.Path })" class="btn btn-sm btn-primary">Edit</a>
+                            <a href="@Url.Action("Delete", "Event", new { id = eventItem.EventId, returnUrl = @Context.Request.Path })" class="btn btn-sm btn-danger">Delete</a>
+                            <button class="btn btn-sm btn-info" onclick="openShareModal(@eventItem.EventId, '@eventItem.Title', '@eventItem.Description', '@eventItem.StartTime', '@eventItem.EndTime', '@eventItem.Location')">
+                                📤 Share
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>Không có sự kiện nào.</p>
+    }
+</div>
+
+<!-- Modal Share -->
+<div class="modal fade" id="shareModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="shareModalLabel">📤 Chia sẻ sự kiện</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="shareForm">
+                    <input type="hidden" id="eventId" name="eventId">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">📧 Email người nhận</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="subject" class="form-label">📌 Tiêu đề</label>
+                        <input type="text" class="form-control" id="subject" name="subject" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="body" class="form-label">📝 Nội dung</label>
+                        <textarea class="form-control" id="body" name="body" rows="5" required></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="submitShare()">Gửi</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    setTimeout(function () {
+        $(".alert").fadeOut("slow");
+    }, 3000);
+
+</script>
+<script type="text/javascript">
+
+    function openShareModal(eventId, title, description, startTime, endTime, address) {
+        document.getElementById("eventId").value = eventId;
+        document.getElementById("subject").value = `${title}`;
+
+        let formattedStartTime = new Date(startTime).toLocaleString();
+        let formattedEndTime = new Date(endTime).toLocaleString();
+
+        let bodyContent = `📅 Tiêu đề: ${title}\n📝 Mô tả: ${description}\n📍 Địa điểm: ${address}\n 🕒 Bắt đầu: ${formattedStartTime}\n⏳ Kết thúc: ${formattedEndTime}\n\n`;
+
+        document.getElementById("body").value = bodyContent;
+
+        // Hiển thị modal
+        var shareModal = new bootstrap.Modal(document.getElementById("shareModal"));
+        shareModal.show();
+    }
+
+        function submitShare() {
+        var email = document.getElementById("email").value.trim();
+        var subject = document.getElementById("subject").value.trim();
+        var body = document.getElementById("body").value.trim();
+        var eventId = document.getElementById("eventId").value;
+
+        if (!email || !subject || !body) {
+            alert("⚠️ Vui lòng điền đầy đủ thông tin trước khi gửi!");
+            return;
+        }
+
+        fetch("/event/share", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ eventId, email, subject, body })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.message) {
+                alert(data.message);
+                location.reload(); // Load lại trang khi gửi thành công
+            }
+        })
+        .catch(error => console.error("Lỗi khi gửi email:", error));
+    }
+</script>
+
+@functions {
+    string GetPriorityClass(string priority)
+    {
+        return priority switch
+        {
+            "high" => "danger",
+            "medium" => "warning",
+            "low" => "success",
+            _ => "secondary"
+        };
+    }
+}
