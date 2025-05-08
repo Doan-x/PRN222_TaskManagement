@@ -29,7 +29,7 @@ builder.Services.AddControllers().AddNewtonsoftJson(options =>
 
 builder.Services.Configure<MailSetting>(builder.Configuration.GetSection("MailSetting"));
 
-//builder.Services.AddHostedService<EventReminderService>();
+builder.Services.AddHostedService<EventReminderService>();
 
 builder.Services.AddTransient<MailHelper>();
 builder.Services.AddHttpContextAccessor();

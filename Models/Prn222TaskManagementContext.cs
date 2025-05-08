@@ -236,8 +236,9 @@ public partial class Prn222TaskManagementContext : DbContext
             entity.Property(e => e.CompletedAt)
                 .HasDefaultValueSql("(NULL)")
                 .HasColumnName("completed_at");
-            entity.Property(e=>e.IsRepeated).HasColumnName("is_repeated")
-            .HasDefaultValue(false);
+            entity.Property(e => e.EmailReminderSent).HasColumnName("email_reminder_sent").HasDefaultValue(false);
+            entity.Property(e=>e.IsRepeated).HasColumnName("is_repeated").HasDefaultValue(false);
+            entity.Property(e => e.TimeReminder).HasColumnName("reminder_time").HasDefaultValueSql("(NULL)");
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("(sysdatetime())")
                 .HasColumnName("created_at");

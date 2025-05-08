@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic;
 using PRN222_TaskManagement.Mail;
 using PRN222_TaskManagement.Models;
 using TrongND;
@@ -35,8 +36,13 @@ namespace PRN222_TaskManagement.Utils
                         var upcomingEvents = dbContext.Events.Include(e => e.User)
                             .Where(e => e.StartTime >= now && e.StartTime <= now.AddHours(1))
                             .ToList();
+                        var upcomingTasks = dbContext.Tasks.Include(e => e.User)
+                            .Where(e => !e.IsRepeated && e.DueDate != null && e.DueDate.Value == DateOnly.FromDateTime(now.AddDays(1)))
+                            .ToList();
+                        var taskDaily = dbContext.Tasks.Include(e => e.User)
+                            .Where(e => e.DueDate != null && e.DueDate.Value == DateOnly.FromDateTime(now) && e.IsRepeated)
+                            .ToList();
 
-                        _logger.LogInformationWithColor($"Tìm thấy {upcomingEvents.Count} sự kiện sắp diễn ra.");
 
                         foreach (var ev in upcomingEvents)
                         {
@@ -65,6 +71,66 @@ namespace PRN222_TaskManagement.Utils
 
                             await dbContext.SaveChangesAsync();
                         }
+
+                        foreach (var ev in upcomingTasks)
+                        {
+                            _logger.LogInformationWithColor($"Task {ev.TaskId}: {ev.Title} due date {ev.DueDate} UTC");
+                            if (!ev.EmailReminderSent)
+                            {
+                                try
+                                {
+
+                                    await emailService.SendGmail(ev.User.Email, "Reminder of today's work",
+                                    $"Task '{ev.Title}' sắp hết hạn vào {ev.DueDate}.");
+                                    _logger.LogInformationWithColor($"Đã gửi email nhắc nhở TASK cho {ev.User.Email}.");
+                                    ev.EmailReminderSent = true;
+                                    dbContext.Tasks.Update(ev);
+                                }
+                                catch (Exception emailEx)
+                                {
+                                    _logger.LogError(emailEx, $"Lỗi khi gửi email cho {ev.User.Email}.");
+                                }
+                            }
+                            else
+                            {
+                                _logger.LogInformationWithColor($"Đã gửi email cho TASKS {ev.TaskId} trước đó, bỏ qua.");
+                            }
+                            await dbContext.SaveChangesAsync();
+                        }
+
+                        if (taskDaily != null && taskDaily.Count > 0)
+                        {
+                            foreach (var ev in taskDaily)
+                            {
+                                _logger.LogInformationWithColor($"Daily task {ev.TaskId}: {ev.Title}: sent: {ev.EmailReminderSent}");
+                                if (!ev.EmailReminderSent)
+                                {
+                                    try
+                                    {
+                                        if (ev.IsRepeated && ev.TimeReminder.HasValue && ev.TimeReminder.Value == TimeOnly.FromDateTime(now))
+                                        {
+                                            await emailService.SendGmail(ev.User.Email, "Reminder of today's work",
+                                                        $"Task today of you : '{ev.Title}' ");
+
+
+                                            _logger.LogInformationWithColor($"Đã gửi email nhắc nhở TASK DAILY cho {ev.User.Email}.");
+                                            ev.EmailReminderSent = true;
+                                            dbContext.Tasks.Update(ev);
+                                        }
+
+                                    }
+                                    catch (Exception emailEx)
+                                    {
+                                        _logger.LogError(emailEx, $"Lỗi khi gửi email cho {ev.User.Email}.");
+                                    }
+                                }
+                                else
+                                {
+                                    _logger.LogInformationWithColor($"Đã gửi email cho TASKS DAILY {ev.TaskId} trước đó, bỏ qua.");
+                                }
+                                await dbContext.SaveChangesAsync();
+                            }
+                        }
                     }
                 }
                 catch (Exception ex)
@@ -73,7 +139,7 @@ namespace PRN222_TaskManagement.Utils
                 }
 
                 // Delay 5 phút trước khi kiểm tra lại
-                await System.Threading.Tasks. Task.Delay(TimeSpan.FromMinutes(20), stoppingToken);
+                await System.Threading.Tasks.Task.Delay(TimeSpan.FromMinutes(5), stoppingToken);
             }
 
         }

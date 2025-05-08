@@ -343,3 +343,4 @@ D:\FPTU\SP25\PRN222\Project\PRN222_TaskManagement\bin\Debug\net9.0\Microsoft.Asp
 D:\FPTU\SP25\PRN222\Project\PRN222_TaskManagement\bin\Debug\net9.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 D:\FPTU\SP25\PRN222\Project\PRN222_TaskManagement\bin\Debug\net9.0\Newtonsoft.Json.Bson.dll
 D:\FPTU\SP25\PRN222\Project\PRN222_TaskManagement\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+D:\FPTU\SP25\PRN222\Project\PRN222_TaskManagement\obj\Debug\net9.0\PRN222_TaskManagement.sourcelink.json

@@ -1,4 +1,6 @@
 ﻿using System.Diagnostics;
+using System.Security.Claims;
+using System.Text;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -9,17 +11,22 @@ using TrongND;
 
 namespace PRN222_TaskManagement.Controllers
 {
+
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IEventService _eventService;
         private readonly ICategoryService _categoryService;
+        private readonly IUserService _userService;
+        private readonly IConfigurationRoot _configuration;
 
-        public HomeController(ILogger<HomeController> logger, IEventService eventService, ICategoryService categoryService)
+        public HomeController(ILogger<HomeController> logger, IEventService eventService, ICategoryService categoryService, IUserService userService, IConfiguration configuration)
         {
             _logger = logger;
             _eventService = eventService;
             _categoryService = categoryService;
+            _userService = userService;
+            _configuration = (IConfigurationRoot)configuration;
         }
 
         [Authorize]
@@ -30,8 +37,14 @@ namespace PRN222_TaskManagement.Controllers
                string sortField = "start_time",
                string sortDirection = "asc")
         {
+            var user = HttpContext.User;
+            var userEmail = user.FindFirst(ClaimTypes.Email)?.Value;
+
+
+            User account = await _userService.GetByEmailAsync(userEmail);
+
             var today = DateTime.Today;
-            var eventsQuery = await _eventService.GetByConditionAsync(e => e.StartTime.Date == today);
+            var eventsQuery = await _eventService.GetByConditionAsync(e =>  e.StartTime.Date <= today && today <= e.EndTime.Date && e.UserId == account.UserId );
 
             if (!string.IsNullOrEmpty(titleSearch))
             {
@@ -99,7 +112,13 @@ namespace PRN222_TaskManagement.Controllers
         }
         public IActionResult Privacy()
         {
-            return View();
+            StringBuilder sb = new StringBuilder();
+            var providers = _configuration.Providers;
+            foreach (var item in providers)
+            {
+                sb.AppendLine(item.ToString());    
+            }
+            return Content(sb.ToString());
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

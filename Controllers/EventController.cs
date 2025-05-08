@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -14,6 +15,7 @@ using TrongND;
 
 namespace PRN222_TaskManagement.Controllers
 {
+    [Authorize]
     public class EventController : Controller
     {
         private readonly IEventService _eventService;
@@ -22,7 +24,6 @@ namespace PRN222_TaskManagement.Controllers
         private readonly IUserService _userService;
         private readonly MailHelper _mail;
         private readonly IEventShareService _eventShareS;
-
         public EventController(IEventService eventService, ILogger<EventController> logger, 
             ICategoryService categoryService, IUserService userService,
             MailHelper mail, IEventShareService eventShareService)
@@ -43,10 +44,17 @@ namespace PRN222_TaskManagement.Controllers
         [HttpGet]
         public async Task<IActionResult> GetEvents()
         {
+            var user = HttpContext.User;
+            var userEmail = user.FindFirst(ClaimTypes.Email)?.Value;
+
+
+            User account = await _userService.GetByEmailAsync(userEmail);
+
             _logger.LogInformationWithColor("Get all events");
             var events = await _eventService.GetAllAsync();
 
-            return new JsonResult(events);
+            var model = events.Where(e => e.UserId == account.UserId);
+            return new JsonResult(model);
 
         }
 
@@ -54,7 +62,15 @@ namespace PRN222_TaskManagement.Controllers
         public async Task<IActionResult> GetEventForm(int id, string? date = null)
         {
             _logger.LogInformationWithColor("Get event form " + id + " " + date);
+
+            var user = HttpContext.User;
+            var userEmail = user.FindFirst(ClaimTypes.Email)?.Value;
+
+
+            User account = await _userService.GetByEmailAsync(userEmail);
+
             var eventItem = await _eventService.GetByIdAsync(id) ?? new Event();
+
 
             // Create event
             if (id == 0 && !string.IsNullOrEmpty(date))
@@ -177,9 +193,17 @@ namespace PRN222_TaskManagement.Controllers
                int? categoryId,
                string? priority)
         {
-            var today = DateTime.Today;
-            var eventsQuery = await _eventService.GetAllAsync();
+            var user = HttpContext.User;
+            var userEmail = user.FindFirst(ClaimTypes.Email)?.Value;
 
+
+            User account = await _userService.GetByEmailAsync(userEmail);
+
+            var today = DateTime.Today;
+            var eventsQuery1 = await _eventService.GetAllAsync();
+
+
+            var eventsQuery = eventsQuery1.Where(e => e.UserId == account.UserId);
             if (!string.IsNullOrEmpty(titleSearch))
             {
 
@@ -280,7 +304,7 @@ namespace PRN222_TaskManagement.Controllers
             ViewData["Categories"] = categories.ToList();
 
 
-            if (model.StartTime > model.EndTime)
+            if (model.StartTime >= model.EndTime)
             {
                 TempData["Error"] = "Save Failed: Invalid start time";
                 ModelState.AddModelError("StartTime", "Start time must not be greater than end time");

@@ -31,6 +31,11 @@ namespace PRN222_TaskManagement.Controllers
         {
             var tasks = await _taskService.GetAllAsync();
 
+            var user = HttpContext.User;
+            var userEmail = user.FindFirst(ClaimTypes.Email)?.Value;
+            var account = await _userService.GetByEmailAsync(userEmail);
+
+            tasks = tasks.Where(t => t.UserId == account.UserId);
 
             if (!string.IsNullOrEmpty(status) && status != "all")
             {
@@ -60,6 +65,8 @@ namespace PRN222_TaskManagement.Controllers
         [Authorize]
         public IActionResult Create()
         {
+            TempData["Success"] = null;
+
             return View();
         }
 
@@ -70,10 +77,23 @@ namespace PRN222_TaskManagement.Controllers
             if (ModelState.IsValid)
             {
                 DateOnly today = DateOnly.FromDateTime(DateTime.Now);
-                if (task.DueDate.HasValue && task.DueDate.Value < today)
+                if (!task.IsRepeated)
                 {
-                    ModelState.AddModelError("DueDate", "Invalid due date");
-                    return View(task);
+                    
+                    if (task.DueDate.HasValue && task.DueDate.Value < today)
+                    {
+                        ModelState.AddModelError("DueDate", "Invalid due date");
+                        return View(task);
+                    }
+                }
+                else
+                {
+                    if (!task.TimeReminder.HasValue)
+                    {
+                        ModelState.AddModelError("TimeReminder", "TimeReminder is required");
+                        return View(task);
+                    }
+                    task.DueDate = today;
                 }
 
                 var user = HttpContext.User;
@@ -128,6 +148,7 @@ namespace PRN222_TaskManagement.Controllers
             }
             else
             {
+                TempData["Success"] = null;
                 var taskSelected = await _taskService.GetByIdAsync(id.Value);
 
                 if (taskSelected == null)
@@ -144,12 +165,23 @@ namespace PRN222_TaskManagement.Controllers
             if (ModelState.IsValid)
             {
                 DateOnly today = DateOnly.FromDateTime(DateTime.Now);
-                if (task.DueDate.HasValue && task.DueDate.Value < today)
+                if (!task.IsRepeated)
                 {
-                    _logger.LogInformationWithColor("Edit Tasks : " + task.DueDate.Value + "today: " +today);
 
-                    ModelState.AddModelError("DueDate", "Invalid due date");
-                    return View(task);
+                    if (task.DueDate.HasValue && task.DueDate.Value < today)
+                    {
+                        ModelState.AddModelError("DueDate", "Invalid due date");
+                        return View(task);
+                    }
+                }
+                else
+                {
+                    if (!task.TimeReminder.HasValue)
+                    {
+                        ModelState.AddModelError("TimeReminder", "TimeReminder is required");
+                        return View(task);
+                    }
+                    task.DueDate = today;
                 }
 
                 var taskOld = await _taskService.GetByIdAsync(task.TaskId);
@@ -159,6 +191,16 @@ namespace PRN222_TaskManagement.Controllers
                 taskOld.Description = task.Description;
                 taskOld.DueDate = task.DueDate;
                 taskOld.Priority = task.Priority;
+                taskOld.IsRepeated = task.IsRepeated;
+                if (task.IsRepeated)
+                {
+                    
+                    taskOld.TimeReminder = task.TimeReminder;
+                }
+                else
+                {
+                    taskOld.TimeReminder = null;
+                }
 
                 await _taskService.UpdateAsync(taskOld);
                 TempData["Success"] = "Update task successfully";
@@ -183,7 +225,26 @@ namespace PRN222_TaskManagement.Controllers
             task.CompletedAt = DateTime.Now;
             task.UpdatedAt = DateTime.Now;
 
-            await _taskService.UpdateAsync(task);                
+            await _taskService.UpdateAsync(task);
+            
+            if(status == "completed" && task.IsRepeated)
+            {
+                var newTask = new PRN222_TaskManagement.Models.Task
+                {
+                    UserId = task.UserId,
+                    Title = task.Title,
+                    Description = task.Description,
+                    DueDate = task.DueDate != null ? task.DueDate.Value.AddDays(1): null,
+                    Priority = task.Priority,
+                    Status = "pending",
+                    IsRepeated = task.IsRepeated,
+                    TimeReminder = task.TimeReminder,
+                    CreatedAt = DateTime.Now,
+                    UpdatedAt = DateTime.Now
+                };
+                await _taskService.AddAsync(newTask);
+            }
+            
 
             return Json(new { message = "Status updated successfully!", status = task.Status });
         }

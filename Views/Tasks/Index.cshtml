@@ -51,7 +51,12 @@
                 </div>
                 <div class="card-body">
                     <p class="card-text">@item.Description</p>                 
-                    <p><strong>Due Date:</strong> @item.DueDate</p>
+                    @if(item.IsRepeated){
+                        <p><strong>Due Date:</strong> Daily (Day: @item.DueDate)</p>
+                        <p><strong>Time Reminder:</strong> @item.TimeReminder?.ToString("HH:mm")</p>
+                    }else{
+                        <p><strong>Due Date:</strong> @item.DueDate</p>
+                    }
                     <p><strong>Completed At:</strong> @(item.CompletedAt?.ToString("yyyy/MM/dd"+ " - "+"HH:mm:ss") ?? "Not Completed")</p>
                     <p>
                         <strong>Priority:</strong>

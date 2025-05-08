@@ -3,28 +3,52 @@
   "WorkspaceRootPath": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\views\\tasks\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:views\\tasks\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\models\\prn222taskmanagementcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:models\\prn222taskmanagementcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\models\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:models\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\views\\event\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:views\\event\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\views\\event\\save.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:views\\event\\save.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\views\\event\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:views\\event\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\services\\implement\\userserviceimplement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:services\\implement\\userserviceimplement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\services\\implement\\taskserviceimplement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:services\\implement\\taskserviceimplement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\services\\implement\\eventshareserviceimplement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:services\\implement\\eventshareserviceimplement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\services\\implement\\eventserviceimplement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,6 +57,42 @@
     {
       "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\services\\implement\\categoryserviceimplement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:services\\implement\\categoryserviceimplement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\views\\tasks\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:views\\tasks\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\utils\\eventreminderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:utils\\eventreminderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\views\\tasks\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:views\\tasks\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\mail\\mailhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:mail\\mailhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\views\\tasks\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:views\\tasks\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\models\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:models\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\models\\prn222taskmanagementcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:models\\prn222taskmanagementcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\services\\implement\\baseserviceimplement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -47,52 +107,12 @@
       "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\services\\implement\\eventshareserviceimplement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:services\\implement\\eventshareserviceimplement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\mail\\mailhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:mail\\mailhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\services\\ieventshareservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:services\\ieventshareservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\views\\event\\save.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:views\\event\\save.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\views\\tasks\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:views\\tasks\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\views\\event\\_eventform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:views\\event\\_eventform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\views\\tasks\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:views\\tasks\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\prn222_taskmanagement.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -101,10 +121,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\views\\tasks\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:views\\tasks\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|solutionrelative:controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8301C4DF-25FE-40E9-B93F-73027AC0E0A4}|PRN222_TaskManagement.csproj|d:\\fptu\\sp25\\prn222\\project\\prn222_taskmanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -117,8 +133,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "DockedWidth": 171,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -130,54 +146,64 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Task.cs",
-              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Models\\Task.cs",
-              "RelativeDocumentMoniker": "Models\\Task.cs",
-              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Models\\Task.cs",
-              "RelativeToolTip": "Models\\Task.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA8wBwAAAAyAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T02:21:15.78Z",
+              "WhenOpened": "2025-03-28T08:18:49.408Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Views\\Event\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Event\\Index.cshtml",
               "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Views\\Event\\Index.cshtml",
               "RelativeToolTip": "Views\\Event\\Index.cshtml",
-              "ViewState": "AgIAAAIBAAAAAAAAAAAAAAgBAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAKUAAAAAAAAAAAAAAMoAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-29T02:09:50.471Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-29T02:09:50.471Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Views\\Tasks\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\Tasks\\Create.cshtml",
-              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Views\\Tasks\\Create.cshtml",
-              "RelativeToolTip": "Views\\Tasks\\Create.cshtml",
-              "ViewState": "AgIAABkAAAAAAAAAAAAYwCAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "Save.cshtml",
+              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Views\\Event\\Save.cshtml",
+              "RelativeDocumentMoniker": "Views\\Event\\Save.cshtml",
+              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Views\\Event\\Save.cshtml",
+              "RelativeToolTip": "Views\\Event\\Save.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-28T09:08:09.02Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-28T14:52:59.574Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Prn222TaskManagementContext.cs",
-              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Models\\Prn222TaskManagementContext.cs",
-              "RelativeDocumentMoniker": "Models\\Prn222TaskManagementContext.cs",
-              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Models\\Prn222TaskManagementContext.cs",
-              "RelativeToolTip": "Models\\Prn222TaskManagementContext.cs",
-              "ViewState": "AgIAANoAAAAAAAAAAAAcwO8AAAAkAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "EventController.cs",
+              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Controllers\\EventController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EventController.cs",
+              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Controllers\\EventController.cs",
+              "RelativeToolTip": "Controllers\\EventController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAWwMsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T02:22:03.661Z",
+              "WhenOpened": "2025-03-29T02:57:17.157Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAAwFsAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-28T08:18:42.796Z",
               "EditorCaption": ""
             },
             {
@@ -188,14 +214,25 @@
               "RelativeDocumentMoniker": "Views\\Event\\List.cshtml",
               "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Views\\Event\\List.cshtml",
               "RelativeToolTip": "Views\\Event\\List.cshtml",
-              "ViewState": "AgIAAJMAAAAAAAAAAAAAALkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAAHQAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-28T13:56:02.016Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-29T08:02:06.971Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
+              "Title": "UserServiceImplement.cs",
+              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Services\\Implement\\UserServiceImplement.cs",
+              "RelativeDocumentMoniker": "Services\\Implement\\UserServiceImplement.cs",
+              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Services\\Implement\\UserServiceImplement.cs",
+              "RelativeToolTip": "Services\\Implement\\UserServiceImplement.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T07:43:14.279Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "CategoryServiceImplement.cs",
               "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Services\\Implement\\CategoryServiceImplement.cs",
               "RelativeDocumentMoniker": "Services\\Implement\\CategoryServiceImplement.cs",
@@ -203,68 +240,85 @@
               "RelativeToolTip": "Services\\Implement\\CategoryServiceImplement.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T01:57:16.312Z",
+              "WhenOpened": "2025-03-29T01:57:16.312Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABsAAAB8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-28T08:19:42.48Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EventServiceImplement.cs",
-              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Services\\Implement\\EventServiceImplement.cs",
-              "RelativeDocumentMoniker": "Services\\Implement\\EventServiceImplement.cs",
-              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Services\\Implement\\EventServiceImplement.cs",
-              "RelativeToolTip": "Services\\Implement\\EventServiceImplement.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAywBYAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T01:34:37.554Z",
+              "WhenOpened": "2025-03-28T08:16:42.491Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Event.cs",
-              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Models\\Event.cs",
-              "RelativeDocumentMoniker": "Models\\Event.cs",
-              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Models\\Event.cs",
-              "RelativeToolTip": "Models\\Event.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAADwvy4AAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T01:54:16.177Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "TasksController.cs",
               "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Controllers\\TasksController.cs",
               "RelativeDocumentMoniker": "Controllers\\TasksController.cs",
               "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Controllers\\TasksController.cs",
               "RelativeToolTip": "Controllers\\TasksController.cs",
-              "ViewState": "AgIAAKUAAAAAAAAAAAAswLgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAK0AAAAAAAAAAAAwwMkAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T08:20:39.144Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-28T08:20:39.144Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "BaseServiceImplement.cs",
-              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Services\\Implement\\BaseServiceImplement.cs",
-              "RelativeDocumentMoniker": "Services\\Implement\\BaseServiceImplement.cs",
-              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Services\\Implement\\BaseServiceImplement.cs",
-              "RelativeToolTip": "Services\\Implement\\BaseServiceImplement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 14,
+              "Title": "AuthenticationController.cs",
+              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Controllers\\AuthenticationController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthenticationController.cs",
+              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Controllers\\AuthenticationController.cs",
+              "RelativeToolTip": "Controllers\\AuthenticationController.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAA3wCcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T01:57:14.556Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-28T08:52:33.271Z"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:920523307:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TaskServiceImplement.cs",
+              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Services\\Implement\\TaskServiceImplement.cs",
+              "RelativeDocumentMoniker": "Services\\Implement\\TaskServiceImplement.cs",
+              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Services\\Implement\\TaskServiceImplement.cs",
+              "RelativeToolTip": "Services\\Implement\\TaskServiceImplement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T07:43:13.4Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
+              "Title": "EventServiceImplement.cs",
+              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Services\\Implement\\EventServiceImplement.cs",
+              "RelativeDocumentMoniker": "Services\\Implement\\EventServiceImplement.cs",
+              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Services\\Implement\\EventServiceImplement.cs",
+              "RelativeToolTip": "Services\\Implement\\EventServiceImplement.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAADwvxYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T01:34:37.554Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "EventShareServiceImplement.cs",
               "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Services\\Implement\\EventShareServiceImplement.cs",
               "RelativeDocumentMoniker": "Services\\Implement\\EventShareServiceImplement.cs",
@@ -272,105 +326,53 @@
               "RelativeToolTip": "Services\\Implement\\EventShareServiceImplement.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T01:37:42.464Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Category.cs",
-              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "Models\\Category.cs",
-              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Models\\Category.cs",
-              "RelativeToolTip": "Models\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T01:36:04.145Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "EventShare.cs",
-              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Models\\EventShare.cs",
-              "RelativeDocumentMoniker": "Models\\EventShare.cs",
-              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Models\\EventShare.cs",
-              "RelativeToolTip": "Models\\EventShare.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T20:25:35.017Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAxwF0AAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T08:18:49.408Z"
+              "WhenOpened": "2025-03-29T01:37:42.464Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACkAAABQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T08:16:42.491Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "IEventShareService.cs",
-              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Services\\IEventShareService.cs",
-              "RelativeDocumentMoniker": "Services\\IEventShareService.cs",
-              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Services\\IEventShareService.cs",
-              "RelativeToolTip": "Services\\IEventShareService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T20:20:16.632Z"
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Views\\Tasks\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Tasks\\Create.cshtml",
+              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Views\\Tasks\\Create.cshtml",
+              "RelativeToolTip": "Views\\Tasks\\Create.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-28T09:08:09.02Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
-              "Title": "Save.cshtml",
-              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Views\\Event\\Save.cshtml",
-              "RelativeDocumentMoniker": "Views\\Event\\Save.cshtml",
-              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Views\\Event\\Save.cshtml",
-              "RelativeToolTip": "Views\\Event\\Save.cshtml",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAEoAAABTAAAAAAAAAA==",
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Views\\Tasks\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Tasks\\Edit.cshtml",
+              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Views\\Tasks\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Tasks\\Edit.cshtml",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAowE0AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-28T14:52:59.574Z"
+              "WhenOpened": "2025-03-28T08:24:52.317Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-28T08:19:42.48Z",
-              "EditorCaption": ""
+              "DocumentIndex": 16,
+              "Title": "EventReminderService.cs",
+              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Utils\\EventReminderService.cs",
+              "RelativeDocumentMoniker": "Utils\\EventReminderService.cs",
+              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Utils\\EventReminderService.cs",
+              "RelativeToolTip": "Utils\\EventReminderService.cs",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAYwI0AAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T03:12:53.053Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "MailHelper.cs",
               "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Mail\\MailHelper.cs",
               "RelativeDocumentMoniker": "Mail\\MailHelper.cs",
               "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Mail\\MailHelper.cs",
               "RelativeToolTip": "Mail\\MailHelper.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwDEAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwDEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-28T20:27:36.442Z"
             },
@@ -382,37 +384,97 @@
               "RelativeDocumentMoniker": "Views\\Tasks\\Index.cshtml",
               "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Views\\Tasks\\Index.cshtml",
               "RelativeToolTip": "Views\\Tasks\\Index.cshtml",
-              "ViewState": "AgIAAHwAAAAAAAAAAAAAAIYAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAQwDYAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-28T05:27:49.779Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAADoAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-28T08:18:42.796Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Views\\Tasks\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Views\\Tasks\\Edit.cshtml",
-              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Views\\Tasks\\Edit.cshtml",
-              "RelativeToolTip": "Views\\Tasks\\Edit.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAABOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-28T08:24:52.317Z"
+              "DocumentIndex": 20,
+              "Title": "Event.cs",
+              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Models\\Event.cs",
+              "RelativeDocumentMoniker": "Models\\Event.cs",
+              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Models\\Event.cs",
+              "RelativeToolTip": "Models\\Event.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAswCAAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T01:54:16.177Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
+              "Title": "Task.cs",
+              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Models\\Task.cs",
+              "RelativeDocumentMoniker": "Models\\Task.cs",
+              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Models\\Task.cs",
+              "RelativeToolTip": "Models\\Task.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAxwB4AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T02:21:15.78Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Prn222TaskManagementContext.cs",
+              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Models\\Prn222TaskManagementContext.cs",
+              "RelativeDocumentMoniker": "Models\\Prn222TaskManagementContext.cs",
+              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Models\\Prn222TaskManagementContext.cs",
+              "RelativeToolTip": "Models\\Prn222TaskManagementContext.cs",
+              "ViewState": "AgIAANwAAAAAAAAAAAAgwPAAAABtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T03:21:44.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "BaseServiceImplement.cs",
+              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Services\\Implement\\BaseServiceImplement.cs",
+              "RelativeDocumentMoniker": "Services\\Implement\\BaseServiceImplement.cs",
+              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Services\\Implement\\BaseServiceImplement.cs",
+              "RelativeToolTip": "Services\\Implement\\BaseServiceImplement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T01:57:14.556Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Category.cs",
+              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "Models\\Category.cs",
+              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Models\\Category.cs",
+              "RelativeToolTip": "Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T01:36:04.145Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "EventShare.cs",
+              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Models\\EventShare.cs",
+              "RelativeDocumentMoniker": "Models\\EventShare.cs",
+              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Models\\EventShare.cs",
+              "RelativeToolTip": "Models\\EventShare.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T20:25:35.017Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "IEventShareService.cs",
+              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Services\\IEventShareService.cs",
+              "RelativeDocumentMoniker": "Services\\IEventShareService.cs",
+              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Services\\IEventShareService.cs",
+              "RelativeToolTip": "Services\\IEventShareService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T20:20:16.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
               "Title": "_EventForm.cshtml",
               "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Views\\Event\\_EventForm.cshtml",
               "RelativeDocumentMoniker": "Views\\Event\\_EventForm.cshtml",
@@ -424,7 +486,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 28,
               "Title": "PRN222_TaskManagement.csproj",
               "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\PRN222_TaskManagement.csproj",
               "RelativeDocumentMoniker": "PRN222_TaskManagement.csproj",
@@ -436,7 +498,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 29,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Views\\Tasks\\Delete.cshtml",
               "RelativeDocumentMoniker": "Views\\Tasks\\Delete.cshtml",
@@ -448,19 +510,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "AuthenticationController.cs",
-              "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Controllers\\AuthenticationController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AuthenticationController.cs",
-              "ToolTip": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\Controllers\\AuthenticationController.cs",
-              "RelativeToolTip": "Controllers\\AuthenticationController.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAgwCcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T08:52:33.271Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\FPTU\\SP25\\PRN222\\Project\\PRN222_TaskManagement\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -483,10 +533,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
             },
             {
               "$type": "Bookmark",

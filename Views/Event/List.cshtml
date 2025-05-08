@@ -133,8 +133,8 @@
                                 @eventItem.Priority
                             </span>
                         </td>
-                        <td>@eventItem.StartTime.ToString("HH:mm")</td>
-                        <td>@eventItem.EndTime.ToString("HH:mm")</td>
+                        <td>@eventItem.StartTime.ToString("yyyy/MM/dd HH:mm")</td>
+                        <td>@eventItem.EndTime.ToString("yyyy/MM/dd HH:mm")</td>
                         <td>@(string.Join("\n", eventItem.EventShares.Select(e => e.SharedWithEmail).Distinct()))</td>
                         <td>
                             <a href="@Url.Action("Save", "Event", new { id = eventItem.EventId , returnUrl = @Context.Request.Path })" class="btn btn-sm btn-primary">Edit</a>

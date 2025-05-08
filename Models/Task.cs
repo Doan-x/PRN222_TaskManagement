@@ -17,7 +17,6 @@ public partial class Task
 
     public string? Description { get; set; }
 
-    [Required(ErrorMessage = "Due Date is not Empty")]
     public DateOnly? DueDate { get; set; }
 
     public DateTime? CompletedAt { get; set; }
@@ -26,7 +25,10 @@ public partial class Task
 
     public string? Status { get; set; }
 
-    public bool? IsRepeated { get; set; } = false;
+    public bool IsRepeated { get; set; } = false;
+    public bool EmailReminderSent { get; set; } = false;
+
+    public TimeOnly? TimeReminder { get; set; }
 
     public DateTime? CreatedAt { get; set; }
 

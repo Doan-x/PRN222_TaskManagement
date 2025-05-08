@@ -24,8 +24,19 @@
                 <span asp-validation-for="Description" class="text-danger"></span>
 
                 </div>
-
-                <div class="mb-3">
+            <div class="mb-3">
+                <label asp-for="IsRepeated" class="form-label">Repeat daily</label>
+                <input asp-for="IsRepeated" id="isRepeatedCheckbox" class="form-check-input" type="checkbox" value="true" checked />
+                <span asp-validation-for="IsRepeated" class="text-danger"></span>
+            </div>
+            <div class="mb-3" id="timeRemind">
+                <label asp-for="TimeReminder" class="form-label">Daily reminder time</label>
+                <input asp-for="TimeReminder" class="form-control" type="time"
+                       @* value="@Model.TimeReminder?.ToString("HH:mm")"  *@
+                       />
+                <span asp-validation-for="TimeReminder" class="text-danger"></span>
+            </div>
+            <div class="mb-3" id="dueDateContainer">
                     <label asp-for="DueDate" class="form-label">Due Date</label>
                     <input asp-for="DueDate" class="form-control" type="date" />
                 <span asp-validation-for="DueDate" class="text-danger"></span>
@@ -44,11 +55,30 @@
             </form>
     </div>
 </div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        $(document).ready(function () {
+            function toggleDueDate() {
+                if ($("#isRepeatedCheckbox").is(":checked")) {
+                    $("#dueDateContainer").hide();
+                    $("#timeRemind").show();
+                } else {
+                    $("#dueDateContainer").show(); // Hiện DueDate nếu IsRepeated bị bỏ chọn
+                    $("#timeRemind").hide()
+
+                }
+            }
+
+            // Ẩn DueDate ngay khi tải trang vì mặc định checkbox đã checked
+            toggleDueDate();
+
+            // Lắng nghe sự kiện thay đổi checkbox
+            $("#isRepeatedCheckbox").change(toggleDueDate);
+        });
+    </script>
 }
+
+
